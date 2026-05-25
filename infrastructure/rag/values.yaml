@@ -166,7 +166,7 @@ backend:
           key: "STACKIT_EMBEDDER_API_KEY"
     stackitVllm:
       apiKey:
-        value: "sk-123"
+        value: "sk-809db9cdec604f5d8330d7f47dd9d242"
         secretKeyRef:
           name: ""
           key: "STACKIT_VLLM_API_KEY"
@@ -179,8 +179,8 @@ backend:
 
   envs:
     stackitVllm:
-      STACKIT_VLLM_MODEL: cortecs/Llama-3.3-70B-Instruct-FP8-Dynamic
-      STACKIT_VLLM_BASE_URL: https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1
+      STACKIT_VLLM_MODEL: meta-llama/Llama-3.1-8B-Instruct
+      STACKIT_VLLM_BASE_URL: https://llm.ai.e-infra.cz/v1/
     database:
       VECTOR_DB_COLLECTION_NAME: rag-db
       VECTOR_DB_LOCATION: http://rag-qdrant:6333
