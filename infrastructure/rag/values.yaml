@@ -73,7 +73,7 @@ backend:
     chatWithHistoryExamples: ""
 
     image:
-      repository: ghcr.io/stackitcloud/rag-template/mcp-server
+      repository: k3d-myregistry:5500/rag-template/mcp-server
       pullPolicy: Always
       tag: ""
 
@@ -81,7 +81,7 @@ backend:
   replicaCount: 1
 
   image:
-    repository: ghcr.io/stackitcloud/rag-template/rag-backend
+    repository: k3d-myregistry:5500/rag-template/rag-backend
     pullPolicy: Always
     tag: ""
 
@@ -252,7 +252,7 @@ frontend:
   name: frontend
   replicaCount: 1
   image:
-    repository: ghcr.io/stackitcloud/rag-template/frontend
+    repository: k3d-myregistry:5500/rag-template/frontend
     pullPolicy: Always
     tag: ""
 
@@ -282,7 +282,7 @@ adminBackend:
   name: admin-backend
 
   image:
-    repository: ghcr.io/stackitcloud/rag-template/admin-backend
+    repository: k3d-myregistry:5500/rag-template/admin-backend
     pullPolicy: Always
     tag: ""
 
@@ -395,7 +395,7 @@ extractor:
   replicaCount: 1
   name: extractor
   image:
-    repository: ghcr.io/stackitcloud/rag-template/document-extractor
+    repository: k3d-myregistry:5500/rag-template/document-extractor
     pullPolicy: Always
     tag: ""
 
@@ -453,7 +453,7 @@ adminFrontend:
   name: admin-frontend
   replicaCount: 1
   image:
-    repository: ghcr.io/stackitcloud/rag-template/admin-frontend
+    repository: k3d-myregistry:5500/rag-template/admin-frontend
     pullPolicy: Always
     tag: ""
 

@@ -225,7 +225,8 @@ IGNORE_BASE = [
 ]
 
 # NOTE: full image names should match the one in the helm chart values.yaml!
-registry = "ghcr.io/stackitcloud/rag-template"
+# Using local k3d registry for development (avoids ghcr.io authentication issues)
+registry = "k3d-myregistry:5500/rag-template"
 rag_api_image_name = "rag-backend"
 
 backend_context = "./services/rag-backend"
@@ -278,7 +279,8 @@ local_resource(
 
 ################################## build mcp image and do live update ##################################################
 # NOTE: full image names should match the one in the helm chart values.yaml!
-registry = "ghcr.io/stackitcloud/rag-template"
+# Using local k3d registry for development (avoids ghcr.io authentication issues)
+registry = "k3d-myregistry:5500/rag-template"
 mcp_image_name = "mcp-server"
 
 mcp_context = "./services/mcp-server"
@@ -317,7 +319,8 @@ local_resource(
 ########################################################################################################################
 
 # NOTE: full image names should match the one in the helm chart values.yaml!
-registry = "ghcr.io/stackitcloud/rag-template"
+# Using local k3d registry for development (avoids ghcr.io authentication issues)
+registry = "k3d-myregistry:5500/rag-template"
 admin_api_image_name = "admin-backend"
 
 admin_backend_context = "./services/admin-backend"
@@ -381,7 +384,8 @@ if os.path.exists(langfuse_env_file):
 ########################################################################################################################
 
 # NOTE: full image names should match the one in the helm chart values.yaml!
-registry = "ghcr.io/stackitcloud/rag-template"
+# Using local k3d registry for development (avoids ghcr.io authentication issues)
+registry = "k3d-myregistry:5500/rag-template"
 document_extractor_image_name = "document-extractor"
 
 extractor_context = "./services/document-extractor"
